@@ -32,7 +32,7 @@ app.post("/sendToAdminId", (req, res) => {
   res.json({ msg: "OK" });
 });
 
-app.get("/sendBroadcast", (req, res) => {
+app.post("/sendBroadcast", (req, res) => {
   const body = req.body;
   sendBroadcast(req, body.HeadMsg, body.Msg);
   res.json({ msg: "OK" });
